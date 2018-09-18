@@ -1,0 +1,219 @@
+
+body{
+	position:absolute;
+	top: 50px;
+	left: 50px;
+}
+#body {
+	width: 323px;
+	height: 600px;
+	border: 2px solid black;
+	background-color: #CBFF9C; 
+}
+
+#header {
+	position: absolute;
+	top: 10px;
+	left: 23px;
+	border: 0px solid black;	
+}
+
+#homeIcon {
+	height: 30px; 
+	width: 30px;
+}
+
+#ecotrackTitle {
+	height: 70px; 
+	width: 210px;
+}
+
+#settingsIcon {
+	height: 30px; 
+	width: 30px;
+}
+
+#belowtitle {
+	position: absolute;
+	top: 70px;
+	left: 5px;	
+	border: 0px solid black;
+	width: 313px;
+	height: 130px;
+}
+
+#ecotrackLogo {	
+	position: absolute;
+	top: 0px;
+	left: 95px;
+	height: 120px; 
+	width: 120px;
+	-webkit-animation: rotation 6s infinite linear; 
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+#buttonContainer {
+	position: absolute;
+	top: 200px;
+	left: 5px;
+	width: 313px;
+	height: 355px;
+	border: 1px solid black;
+	background-color: #CBFF9C;
+}
+
+#mapContainer {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 4px solid black;
+    top: 80px;
+    left: 11px;
+}
+
+#map {
+	width: 292px;
+    height: 492px;
+}
+
+#profileContainer {
+	width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 4px solid black;
+    top: 80px;
+    left: 11px;
+}
+
+#leaderboardContainer{
+	width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 4px solid black;
+    top: 80px;
+    left: 11px;
+}
+
+#storeContainer {
+	width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 4px solid black;
+    top: 80px;
+    left: 11px;
+}
+
+#aboutusContainer {
+	width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 4px solid black;
+    top: 80px;
+    left: 11px;
+}
+
+#learnContainer {
+	width: 300px;
+    height: 500px;
+    position: absolute;
+    border: 4px solid black;
+    top: 80px;
+    left: 11px;
+}
+
+#mapIMG, #storeIMG, #leaderboardIMG, #profileIMG {
+	height: 150px; 
+	width: 150px;
+}
+
+#informationIMG, #learnIMG {
+	height: 40px;
+	width: 150px;
+}
+
+#mapButton {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+#profileButton {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
+#storeButton {
+	position: absolute;
+	top: 156px;
+	left: 4px;
+}
+
+#leaderboardButton {
+	position: absolute;
+	top: 156px;
+	right: 4px;
+}
+
+#learnButton {
+	position: absolute;
+	top: 308px;
+	right: 4px;
+}
+
+#informationButton {
+	position: absolute;
+	top: 308px;
+	left: 4px;
+}
+
+
+
+
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}

@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Eco Tracker</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <style type="text/css"></style>
+
+    <link rel="stylesheet" href="styles.css" type="text/css"> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    function adjustToWindow(){
+    if($(window).width() <= 600)
+    {
+        $
+    }
+
+    }
+
+    $(function(){
+      adjustToWindow();
+
+      //onload
+      $("#button1").hide().show(2000);
+      $("#button2").hide().delay(200).show(2000);
+      $("#button3").hide().delay(400).show(2000);
+      $("#button4").hide().delay(600).show(2000);
+
+      //BUTTON 1 FUNCTIONS ( PIG )
+      $("#button1").on({
+        mousedown: function(){
+          $('#button1').html('<a href="page1.html"><img height="100" width ="100" src="images/pig2.png"> </a>');
+        },
+        mouseup: function(){
+          //$('#button1').html('<a href="page1.html"><img height="100" width ="100" src="images/pig1.png"></a>');
+          $(location).attr('href','hello.html');
+        }
+      });
+     
+      //BUTTON 2 FUNCTIONS ( ECOTRACKLOGO )
+      $("#button2").on({
+        mousedown: function(){
+          $('#button2').html('<a href="page1.html"><img height="100" width ="100" src="images/ecotracklogo2.png"></a>');
+
+        },
+        mouseup: function(){
+          $('#button2').html('<a href="page1.html"><img height="100" width ="100" src="images/ecotracklogo1.png"></a>');
+        } 
+
+      });
+
+      //BUTTON 3 FUNCTIONS ( ECOTRACKLOGO )
+      $("#button3").on({
+        mousedown: function(){
+          $('#button3').html('<a href="page1.html"><img height="110" width ="95" src="images/chick1.png"></a>');
+
+        },
+        mouseup: function(){
+          $('#button3').html('<a href="page1.html"><img height="105" width ="90" src="images/chick1.png"></a>');
+        } 
+
+      });
+    });
+
+    </script>   
+  </head>
+
+  <body>
+    
+    <div id="body">
+      <div id="header">
+        <a href="homepage.html">      
+          <img id="homeIcon" src="images/homeIcon.png"/>
+        </a>
+        <a href="homepage.html">      
+          <img id="ecotrackTitle" src="images/ecotracktitle.png"/>
+        </a>
+        <a href="homepage.html">      
+          <img id="settingsIcon" src="images/settingsIcon.png"/>
+        </a> 
+      </div>
+
+      <div id="belowtitle">        
+        <a href="">      
+          <img id="ecotrackLogo" src="images"/> 
+        </a>Profile 
+      </div>
+
+      <div id="profileContainer">      
+        
+      </div>
+    </div>
+  </body>
+</html>﻿
