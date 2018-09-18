@@ -23,7 +23,6 @@
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
-                    zoom: 9,
 
                     // The latitude and longitude to center the map (always required)
                     center: new google.maps.LatLng(-36.6700, 174.600), // New York
@@ -83,19 +82,84 @@
                 var map = new google.maps.Map(mapElement, mapOptions);
 
                 // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(-36.3800, 174.400),
-                    map: map,
-                    title: 'Snazzy!'
+                
+
+                var icon = {
+                    url: "images/smallpig.png",
+                    scaledSize: new google.maps.Size(6, 6),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(3, 3)                    
+                };
+
+                google.maps.event.addListener(map, 'zoom_changed', function() {
+                    console.log('a');
+                    var zoom = map.getZoom();
+                    var sizeX = zoom * 2;
+                    var sizeY = zoom * 2;
+                    
+                    icon.scaledSize = new googlemaps.Size(sizeX, sizeY);                        
+                    icon.origin = new google.maps.Point(0, 0);
+                    icon.anchor = new google.maps.Point(sizeX / 2, sizeY / 2);
+                        
                 });
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(-36.6700, 174.600),
+                    map: map,
+                    icon: icon,
+                    animation: null,
+                    draggable: true                    
+                });
+
+                
+
+                var content = '<div id="content">'+
+                                    '<div id="bodyContent">'+
+                                        '<button>'+
+                                    '</div>'+
+                                '</div>';
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: content                    
+                });
+
+                //marker.addListener('click', toogleBounce);
+                marker.addListener('click', toggleInfoWindow);
+                
+
+                function toogleBounce(){
+                    if(marker.getAnimation() !== null)
+                    {
+                        marker.setAnimation(null);
+                        console.log("hi");
+                    }
+                    else
+                    {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                    }
+                }   
+
+                function toggleInfoWindow(){
+                    if(infowindow.close(map, marker) !== true)
+                    {
+                        infowindow.open(map, marker);
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                        console.log("hi");
+                    }
+                    else
+                    {
+                        infowindow.close(map, marker);
+                        marker.setAnimation(null);
+                        console.log("hi2");
+                    }
+                }           
+
+
             }
         </script>
   </head>
 
-  <body>
-    
+  <body>    
     <div id="body">
-
       <div id="header">
         <a href="homepage.html">      
           <img id="homeIcon" src="images/homeIcon.png"/>
@@ -107,15 +171,10 @@
           <img id="settingsIcon" src="images/settingsIcon.png"/>
         </a> 
       </div>
-
       <div id="mapContainer">      
         <div id="map"></div>
       </div>
-
     </div>
-
-      
-
       
     </body>
 </html>﻿

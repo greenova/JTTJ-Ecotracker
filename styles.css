@@ -11,6 +11,11 @@ body{
 	background-color: #CBFF9C; 
 }
 
+#content{
+	width: 100px;
+	height: 80px;
+}
+
 #header {
 	position: absolute;
 	top: 10px;
